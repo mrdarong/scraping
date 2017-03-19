@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package uk.co.miki.service.scraping.batch;
+package uk.co.miki.service.scraping.scheduled;
 
 import java.io.IOException;
 import java.text.ParseException;

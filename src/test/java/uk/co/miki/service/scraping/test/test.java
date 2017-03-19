@@ -11,7 +11,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 import uk.co.miki.service.scraping.Scarpingbatch;
-import uk.co.miki.service.scraping.batch.Scraping;
+import uk.co.miki.service.scraping.scheduled.Scraping;
 import uk.co.miki.service.scraping.model.Index;
 
 /**
