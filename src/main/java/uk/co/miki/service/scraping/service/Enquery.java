@@ -28,4 +28,8 @@ public class Enquery {
         return null;
     }
     
+    public void updateIndex(Index index) {
+        indexRepository.save(index);
+    }
+    
 }

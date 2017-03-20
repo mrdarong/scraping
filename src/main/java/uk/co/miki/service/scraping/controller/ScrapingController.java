@@ -9,10 +9,9 @@ import java.util.Collections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 import org.springframework.http.ResponseEntity;
 import static org.springframework.http.ResponseEntity.ok;
-import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,5 +35,12 @@ public class ScrapingController {
     public Index searchIndex(@RequestParam("index") String index) {
         logger.info("request index : " + index);
         return Enquery.getIndex(index);
+    }
+    
+    @RequestMapping(method = RequestMethod.POST, value = "/updateindex")
+    public ResponseEntity<?> searchIndex(@RequestBody Index index) {
+        logger.info("request index : " + index);
+        Enquery.updateIndex(index);
+        return ok(Collections.singletonMap("response", "finish"));
     }
 }
